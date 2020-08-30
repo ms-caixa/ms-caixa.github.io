@@ -75,3 +75,11 @@ function resetForm() {
     });
 
 }
+
+$(document).ready(function() {
+
+    console.info("ready");
+    $('.class_total_qt').attr('type', 'number');
+    $('.class_total_qt').attr('pattern', '\d*');
+
+});
