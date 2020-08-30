@@ -1,59 +1,54 @@
+function submitForm() {
 
-<script type="application/javascript" charset="UTF-8"> 
+    var totalClass = document.getElementsByClassName('total');
+    var result = 0;
+    Array.prototype.filter.call(totalClass, function(total) {
+        // console.log( "total.id: " + total.id);
 
-    function submitForm() {
+        if (isNumeric(total.value)) {
 
-        var totalClass = document.getElementsByClassName('total');
-        var result = 0;
-        Array.prototype.filter.call(totalClass, function(total) {
-            // console.log( "total.id: " + total.id);
-                
-            if (isNumeric(total.value)) {
+            result = sum(result, total.value);
 
-                result = sum(result, total.value);
+        }
 
-            }
+        // console.log( "result: " + result);
+        document.getElementById("total-amount").value = result;
 
-            // console.log( "result: " + result);
-            document.getElementById("total-amount").value = result;
+        retirarCaixa = sum(result, (document.getElementById("aberturaCaixa").value * -1));
+        document.getElementById("retirarCaixa").innerHTML = retirarCaixa;
 
-            retirarCaixa = sum(result, (document.getElementById("aberturaCaixa").value * -1));
-            document.getElementById("retirarCaixa").innerHTML = retirarCaixa;
+    });
 
-        });
-       
-    }
+}
 
-    function isNumeric(n) {
-        
-        var b = !isNaN(parseFloat(n)) && isFinite(n);
-        return b;
-    }
+function isNumeric(n) {
 
-    function sum (a, b) {
+    var b = !isNaN(parseFloat(n)) && isFinite(n);
+    return b;
+}
 
-        result = parseFloat(a) + parseFloat(b);
+function sum(a, b) {
 
-        return result.toFixed(2);
-    }
+    result = parseFloat(a) + parseFloat(b);
 
-    function calcLinha(moeda, quantidade, resultID) {
+    return result.toFixed(2);
+}
 
-        valor = (moeda * quantidade).toFixed(2);
-        document.getElementById(resultID).value = valor;
+function calcLinha(moeda, quantidade, resultID) {
 
-    }
+    valor = (moeda * quantidade).toFixed(2);
+    document.getElementById(resultID).value = valor;
 
-    function resetForm() {
-       
-        document.getElementById("form-caixa").reset();
-        document.getElementById("total-amount").value = "";
-        document.getElementById("retirarCaixa").innerHTML = "R$0.00";
-        var forms = document.getElementsByClassName('needs-validation');
-        
-        Array.prototype.filter.call(forms, function(form) {
-            form.classList.remove('was-validated');
-        });
-    }
+}
 
-</script>
+function resetForm() {
+
+    document.getElementById("form-caixa").reset();
+    document.getElementById("total-amount").value = "";
+    document.getElementById("retirarCaixa").innerHTML = "R$0.00";
+    var forms = document.getElementsByClassName('needs-validation');
+
+    Array.prototype.filter.call(forms, function(form) {
+        form.classList.remove('was-validated');
+    });
+}

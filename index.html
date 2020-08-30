@@ -1,282 +1,287 @@
 <html>
-    <head>
 
-        <title>Caixa - Fechamento</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-        <meta name="generator" content="Jekyll v4.1.1">
+<head>
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-       
+    <title>Caixa - Fechamento</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
 
-        <style>
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
             }
-    
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-                }
-            }
-             body {
-                padding-top: 5rem;
-                }
-            .starter-template {
-                padding: 3rem 1.5rem;
-                text-align: center;
-            }
-        </style>
-    </head>
+        }
+        
+        body {
+            padding-top: 5rem;
+        }
+        
+        .starter-template {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
 
-    <body  class="d-flex flex-column h-100">
-        <main role="main" class="flex-shrink-0">
-            <div class="container">
+<body class="d-flex flex-column h-100">
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
 
-                <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                    <h1 class="display-4">Fechamento</h1>
-                    <h1 class="display-4">Caixa</h1>
-                    <p class="lead">Um utiliário para ajudar o fechamento do caixa.</p>
-                  </div>
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-4">Fechamento</h1>
+                <h1 class="display-4">Caixa</h1>
+                <p class="lead">Um utiliário para ajudar o fechamento do caixa.</p>
+            </div>
 
-                  <div class="form-group row">
-                    <div class="col-12">
-                        <button class="btn btn-danger btn-lg btn-block" onclick="resetForm();">Apagar Valores</button>
-                    </div>
+            <div class="form-group row">
+                <div class="col-12">
+                    <button class="btn btn-danger btn-lg btn-block" onclick="resetForm();">Apagar Valores</button>
                 </div>
-                <form class="needs-validation" id="form-caixa" novalidate>
+            </div>
+            <form class="needs-validation" id="form-caixa" novalidate>
 
-                    <div>
-                        <div class="form-group row">
-                            <div class="col-4">
+                <div>
+                    <div class="form-group row">
+                        <div class="col-4">
                             <b>Valor/Moeda</b>
-                            </div>
-                            <div class="col-4">
-                                <b>Quantidade</b>
-                            </div>
-                            <div class="col-4">
+                        </div>
+                        <div class="col-4">
+                            <b>Quantidade</b>
+                        </div>
+                        <div class="col-4">
                             <b>Total</b>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                            R$ 0,05 
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(0.05, this.value, 'total_005')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total" readonly id="total_005" />
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 0,10
-                            </div>
-                            <div class="col-4">
-                                <input  class="form-control" type="text" onkeyup="calcLinha(0.10, this.value, 'total_010')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total" readonly id="total_010"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 0,25
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(0.25, this.value, 'total_025')"/>
-                            </div>
-                            <div class="col-4">
-                                <input  class="form-control total" readonly id="total_025"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 0,50
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(0.50, this.value, 'total_050')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total" readonly id="total_050"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 1,00
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(1, this.value, 'total_100')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total" readonly id="total_100"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 2,00
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(2, this.value, 'total_200')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total" readonly id="total_200"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 5,00
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(5, this.value, 'total_500')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total" readonly id="total_500"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 10,00
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(10, this.value, 'total_1000')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total" readonly id="total_1000"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 20,00
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(20, this.value, 'total_2000')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total"readonly id="total_2000"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 50,00
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(50, this.value, 'total_5000')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total" readonly id="total_5000"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 100,00
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(100, this.value, 'total_10000')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total" readonly id="total_10000"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                R$ 200,00
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control" type="text" onkeyup="calcLinha(200, this.value, 'total_20000')"/>
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control total" readonly id="total_20000"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-4">
-                                Total
-                            </div>
-                            <div class="col-4">
-                                
-                            </div>
-                            <div class="col-4">
-                                <input class="form-control totalValues" readonly id="total-amount"/>
-                            </div>
-                        </div>
-                    
-                        <div class="form-group row">
-                            <div class="col-6">
-                                <label for="aberturaCaixa">Abertura do Caixa</label>
-                                <input type="text" class="form-control" id="aberturaCaixa" required/>
-                                <div class="invalid-feedback">
-                                    Informe a abertura do caixa.
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <label for="retirarCaixa">Retirar do Caixa</label>
-                                <h2> <retirarCaixa id="retirarCaixa"> R$0.00 </retirarCaixa> </h2>
-                            </div>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-12">
-                            <button class="btn btn-primary btn-lg btn-block submit-form">Clique para Calcular</button>
+                        <div class="col-4">
+                            R$ 0,05
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(0.05, this.value, 'total_005')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_005" />
                         </div>
                     </div>
-                </form>
 
-                <script type="application/javascript">
-                    // Example starter JavaScript for disabling form submissions if there are invalid fields
-                    (function() {
-                    'use strict';
-                    window.addEventListener('load', function() {
-                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                        var forms = document.getElementsByClassName('needs-validation');
-                        // Loop over them and prevent submission
-                        var validation = Array.prototype.filter.call(forms, function(form) {
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 0,10
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(0.10, this.value, 'total_010')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_010" />
+                        </div>
+                    </div>
 
-                            form.addEventListener('submit', function(event) {
-                                console.log( "checkValidity: " + form.checkValidity());
-                                event.preventDefault();
-                                event.stopPropagation();
-                                if (form.checkValidity() === true) {
-                                    
-                                    submitForm();
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 0,25
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(0.25, this.value, 'total_025')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_025" />
+                        </div>
+                    </div>
 
-                                }
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 0,50
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(0.50, this.value, 'total_050')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_050" />
+                        </div>
+                    </div>
 
-                                form.classList.add('was-validated');
-                            }, false);
-                        });
-                    }, false);
-                    })();
-                </script>
-            </div>
-        </main>
-        
-    </body>
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 1,00
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(1, this.value, 'total_100')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_100" />
+                        </div>
+                    </div>
 
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 2,00
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(2, this.value, 'total_200')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_200" />
+                        </div>
+                    </div>
 
-    <script src="./js/index.js"></script>
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 5,00
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(5, this.value, 'total_500')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_500" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 10,00
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(10, this.value, 'total_1000')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_1000" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 20,00
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(20, this.value, 'total_2000')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_2000" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 50,00
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(50, this.value, 'total_5000')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_5000" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 100,00
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(100, this.value, 'total_10000')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_10000" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-4">
+                            R$ 200,00
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" type="text" onkeyup="calcLinha(200, this.value, 'total_20000')" />
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control total" readonly id="total_20000" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-4">
+                            Total
+                        </div>
+                        <div class="col-4">
+
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control totalValues" readonly id="total-amount" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-6">
+                            <label for="aberturaCaixa">Abertura do Caixa</label>
+                            <input type="text" class="form-control" id="aberturaCaixa" required/>
+                            <div class="invalid-feedback">
+                                Informe a abertura do caixa.
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <label for="retirarCaixa">Retirar do Caixa</label>
+                            <h2>
+                                <retirarCaixa id="retirarCaixa"> R$0.00 </retirarCaixa>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-12">
+                        <button class="btn btn-primary btn-lg btn-block submit-form">Clique para Calcular</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+</body>
+
+<script src="./js/index.js"></script>
+<script type="application/javascript">
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+
+                form.addEventListener('submit', function(event) {
+                    console.log("checkValidity: " + form.checkValidity());
+                    event.preventDefault();
+                    event.stopPropagation();
+                    if (form.checkValidity() === true) {
+
+                        submitForm();
+
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
 
 </html>
