@@ -57,10 +57,10 @@
 
                 <div>
                     <div class="form-group row">
-                        <div class="col-4">
-                            <b>Valor</b>
+                        <div class="col-3">
+                            <b>Valor(R$)</b>
                         </div>
-                        <div class="col-4">
+                        <div class="col-5">
                             <b>Quantidade</b>
                         </div>
                         <div class="col-4">
@@ -69,11 +69,27 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 0,05
+                        <div class="col-3">
+                            0,05
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(0.05, this.value, 'total_005')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(0.05, 'total_005', 'id_total_005_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(0.05, this.value, 'total_005')" id="id_total_005_qt" />
+                                <div class="input-group-prepend" onclick="calcAmount(0.05, 'total_005', 'id_total_005_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_005" />
@@ -81,11 +97,27 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 0,10
+                        <div class="col-3">
+                            0,10
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(0.10, this.value, 'total_010')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(0.1, 'total_010', 'id_total_010_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(0.10, this.value, 'total_010')" id="id_total_010_qt" />
+                                <div class="input-group-prepend" onclick="calcAmount(0.1, 'total_010', 'id_total_010_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_010" />
@@ -93,11 +125,27 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 0,25
+                        <div class="col-3">
+                            0,25
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(0.25, this.value, 'total_025')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(0.25, 'total_025', 'id_total_025_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(0.25, this.value, 'total_025')" id="id_total_025_qt" />
+                                <div class="input-group-prepend" onclick="calcAmount(0.25, 'total_025', 'id_total_025_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_025" />
@@ -105,11 +153,27 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 0,50
+                        <div class="col-3">
+                            0,50
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(0.50, this.value, 'total_050')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(0.5, 'total_050', 'id_total_050_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(0.50, this.value, 'total_050')" id="id_total_050_qt" />
+                                <div class="input-group-prepend" onclick="calcAmount(0.50, 'total_050', 'id_total_050_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_050" />
@@ -117,11 +181,27 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 1,00
+                        <div class="col-3">
+                            1,00
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(1, this.value, 'total_100')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(1, 'total_100', 'id_total_100_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(1, this.value, 'total_100')" id="id_total_100_qt" />
+                                <div class="input-group-prepend" onclick="calcAmount(1, 'total_100', 'id_total_100_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_100" />
@@ -129,11 +209,27 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 2,00
+                        <div class="col-3">
+                            2,00
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(2, this.value, 'total_200')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(2, 'total_200', 'id_total_200_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(2, this.value, 'total_200')" id="id_total_200_qt" />
+                                <div class="input-group-prepend" onclick="calcAmount(2, 'total_200', 'id_total_200_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_200" />
@@ -141,11 +237,27 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 5,00
+                        <div class="col-3">
+                            5,00
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(5, this.value, 'total_500')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(5, 'total_500', 'id_total_500_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(5, this.value, 'total_500')" id="id_total_500_qt" />
+                                <div class="input-group-prepend" onclick="calcAmount(5, 'total_500', 'id_total_500_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_500" />
@@ -153,11 +265,27 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 10,00
+                        <div class="col-3">
+                            10,00
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(10, this.value, 'total_1000')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(10, 'total_1000', 'id_total_1000_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(10, this.value, 'total_1000')" id="id_total_1000_qt" />
+                                <div class="input-group-prepend" onclick="calcAmount(10, 'total_1000', 'id_total_1000_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_1000" />
@@ -165,11 +293,27 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 20,00
+                        <div class="col-3">
+                            20,00
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(20, this.value, 'total_2000')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(20, 'total_2000', 'id_total_2000_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(20, this.value, 'total_2000')" id="id_total_2000_qt" />
+                                <div class="input-group-prepend" onclick="calcAmount(20, 'total_2000', 'id_total_2000_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_2000" />
@@ -177,11 +321,29 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 50,00
+                        <div class="col-3">
+                            50,00
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(50, this.value, 'total_5000')" />
+                        <div class="col-5">
+
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(50, 'total_5000', 'id_total_5000_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(50, this.value, 'total_5000')" id="id_total_5000_qt" />
+
+                                <div class="input-group-prepend" onclick="calcAmount(50, 'total_5000', 'id_total_5000_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_5000" />
@@ -189,11 +351,28 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 100,00
+                        <div class="col-3">
+                            100,00
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(100, this.value, 'total_10000')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(100, 'total_10000', 'id_total_10000_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" onkeyup="calcLinha(100, this.value, 'total_10000')" id="id_total_10000_qt" />
+
+                                <div class="input-group-prepend" onclick="calcAmount(100, 'total_10000', 'id_total_10000_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_10000" />
@@ -201,11 +380,29 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-4">
-                            R$ 200,00
+                        <div class="col-3">
+                            200,00
                         </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(200, this.value, 'total_20000')" />
+                        <div class="col-5">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend" onclick="calcAmount(200, 'total_20000', 'id_total_20000_qt', -1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <input class="form-control" type="text" onkeyup="calcLinha(200, this.value, 'total_20000')" id="id_total_20000_qt" />
+
+                                <div class="input-group-prepend" onclick="calcAmount(200, 'total_20000', 'id_total_20000_qt', 1);">
+                                    <div class="input-group-text">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4">
                             <input class="form-control total" readonly id="total_20000" />

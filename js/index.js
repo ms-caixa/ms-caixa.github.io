@@ -41,6 +41,27 @@ function calcLinha(moeda, quantidade, resultID) {
 
 }
 
+function calcAmount(moeda, resultID, qtfieldID, factor) {
+
+    count = document.getElementById(qtfieldID).value;
+    if (count == '') {
+        count = 0;
+    }
+
+    // console.info("moeda: " + moeda + " ; count: " + count);
+    count = parseInt(count) + parseInt(factor);
+    if (count < 0) {
+        count = 0;
+    }
+
+    // console.info("count: " + count);
+    document.getElementById(qtfieldID).value = count;
+
+    result = count * parseFloat(moeda);
+    document.getElementById(resultID).value = parseFloat(result).toFixed(2);
+
+}
+
 function resetForm() {
 
     document.getElementById("form-caixa").reset();
@@ -51,4 +72,5 @@ function resetForm() {
     Array.prototype.filter.call(forms, function(form) {
         form.classList.remove('was-validated');
     });
+
 }
