@@ -46,201 +46,201 @@
                     <h1 class="display-4">Caixa</h1>
                     <p class="lead">Um utiliário para ajudar o fechamento do caixa.</p>
                   </div>
-                <form class="needs-validation" novalidate>
 
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <button type="reset" class="btn btn-danger btn-lg btn-block">Apagar Valores</button>
-                        </div>
+                  <div class="form-group row">
+                    <div class="col-12">
+                        <button class="btn btn-danger btn-lg btn-block" onclick="resetForm();">Apagar Valores</button>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-4">
-                        <b>Valor/Moeda</b>
-                        </div>
-                        <div class="col-4">
-                            <b>Quantidade</b>
-                        </div>
-                        <div class="col-4">
-                        <b>Total</b>
-                        </div>
-                    </div>
+                </div>
+                <form class="needs-validation" id="form-caixa" novalidate>
 
-                    <div class="form-group row">
-                        <div class="col-4">
-                           R$ 0,05 
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(0.05, this.value, 'total_005')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total" readonly id="total_005" />
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 0,10
-                        </div>
-                        <div class="col-4">
-                            <input  class="form-control" type="text" onkeyup="calcLinha(0.10, this.value, 'total_010')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total" readonly id="total_010"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 0,25
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(0.25, this.value, 'total_025')"/>
-                        </div>
-                        <div class="col-4">
-                            <input  class="form-control total" readonly id="total_025"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 0,50
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(0.50, this.value, 'total_050')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total" readonly id="total_050"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 1,00
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(1, this.value, 'total_100')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total" readonly id="total_100"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 2,00
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(2, this.value, 'total_200')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total" readonly id="total_200"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 5,00
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(5, this.value, 'total_500')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total" readonly id="total_500"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 10,00
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(10, this.value, 'total_1000')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total" readonly id="total_1000"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 20,00
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(20, this.value, 'total_2000')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total"readonly id="total_2000"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 50,00
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(50, this.value, 'total_5000')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total" readonly id="total_5000"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 100,00
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(100, this.value, 'total_10000')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total" readonly id="total_10000"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            R$ 200,00
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control" type="text" onkeyup="calcLinha(200, this.value, 'total_20000')"/>
-                        </div>
-                        <div class="col-4">
-                            <input class="form-control total" readonly id="total_20000"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-4">
-                            Total
-                        </div>
-                        <div class="col-4">
-                            
-                        </div>
-                        <div class="col-4">
-                            <input type="text" class="form-control totalValues" readonly/>
-                        </div>
-                    </div>
-                
-                    <div class="form-group row">
-                        <div class="col-4">
-                            <label for="aberturaCaixa">Abertura do Caixa</label>
-                            <input type="text" class="form-control" id="aberturaCaixa" required/>
-                            <div class="invalid-feedback">
-                                Informe a abertura do caixa.
+                    <div>
+                        <div class="form-group row">
+                            <div class="col-4">
+                            <b>Valor/Moeda</b>
+                            </div>
+                            <div class="col-4">
+                                <b>Quantidade</b>
+                            </div>
+                            <div class="col-4">
+                            <b>Total</b>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <label for="retirarCaixa">Retirar do Caixa</label>
-                            <h2> <retirarCaixa id="retirarCaixa"> R$0.00 </retirarCaixa> </h2>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                            R$ 0,05 
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(0.05, this.value, 'total_005')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total" readonly id="total_005" />
+                            </div>
                         </div>
-                        <div class="col-4">
-                            
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 0,10
+                            </div>
+                            <div class="col-4">
+                                <input  class="form-control" type="text" onkeyup="calcLinha(0.10, this.value, 'total_010')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total" readonly id="total_010"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 0,25
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(0.25, this.value, 'total_025')"/>
+                            </div>
+                            <div class="col-4">
+                                <input  class="form-control total" readonly id="total_025"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 0,50
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(0.50, this.value, 'total_050')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total" readonly id="total_050"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 1,00
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(1, this.value, 'total_100')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total" readonly id="total_100"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 2,00
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(2, this.value, 'total_200')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total" readonly id="total_200"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 5,00
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(5, this.value, 'total_500')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total" readonly id="total_500"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 10,00
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(10, this.value, 'total_1000')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total" readonly id="total_1000"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 20,00
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(20, this.value, 'total_2000')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total"readonly id="total_2000"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 50,00
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(50, this.value, 'total_5000')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total" readonly id="total_5000"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 100,00
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(100, this.value, 'total_10000')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total" readonly id="total_10000"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                R$ 200,00
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" onkeyup="calcLinha(200, this.value, 'total_20000')"/>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control total" readonly id="total_20000"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                Total
+                            </div>
+                            <div class="col-4">
+                                
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control totalValues" readonly id="total-amount"/>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="aberturaCaixa">Abertura do Caixa</label>
+                                <input type="text" class="form-control" id="aberturaCaixa" required/>
+                                <div class="invalid-feedback">
+                                    Informe a abertura do caixa.
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="retirarCaixa">Retirar do Caixa</label>
+                                <h2> <retirarCaixa id="retirarCaixa"> R$0.00 </retirarCaixa> </h2>
+                            </div>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-12">
-                            <button type="button" class="btn btn-primary btn-lg btn-block submit-form">Clique para Calcular</button>
+                            <button class="btn btn-primary btn-lg btn-block submit-form">Clique para Calcular</button>
                         </div>
                     </div>
                 </form>
@@ -254,13 +254,19 @@
                         var forms = document.getElementsByClassName('needs-validation');
                         // Loop over them and prevent submission
                         var validation = Array.prototype.filter.call(forms, function(form) {
-                        form.addEventListener('submit', function(event) {
-                            if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                            }
-                            form.classList.add('was-validated');
-                        }, false);
+
+                            form.addEventListener('submit', function(event) {
+                                console.log( "checkValidity: " + form.checkValidity());
+                                event.preventDefault();
+                                event.stopPropagation();
+                                if (form.checkValidity() === true) {
+                                    
+                                    submitForm();
+                                    
+                                }
+
+                                form.classList.add('was-validated');
+                            }, false);
                         });
                     }, false);
                     })();
@@ -272,50 +278,60 @@
 
 
     <script type="application/javascript" charset="UTF-8"> 
-            
-        $(document).ready(function(){
 
-            $(".submit-form").click(function(){
+        function submitForm() {
 
-                var total = 0;
-                $( ".total" ).each(function( index ) {
+            var totalClass = document.getElementsByClassName('total');
+            var result = 0;
+            Array.prototype.filter.call(totalClass, function(total) {
+                // console.log( "total.id: " + total.id);
+                    
+                if (isNumeric(total.value)) {
 
-                    valor = $(this).val();
-                    // console.log( index + ": " + $(this).val());
-                    if ($.isNumeric(valor)) {
+                    result = sum(result, total.value);
 
-                        total = sum(total, valor);
+                }
 
-                    }
-                });
+                // console.log( "result: " + result);
+                document.getElementById("total-amount").value = result;
 
-                // console.log( "total: " + total);
-                // $(".totalValues").attr('value', '');
-                $(".totalValues").attr('value', total);
-
-                aberturaCaixa = $("#aberturaCaixa").val();
-                retirarCaixa = $("#retirarCaixa").val();
-
-                retirarCaixa = sum(total, (aberturaCaixa * -1))
-                // console.log( "retirarCaixa: " + retirarCaixa);
-                $("#retirarCaixa").html("R$" + retirarCaixa);
+                retirarCaixa = sum(result, (document.getElementById("aberturaCaixa").value * -1));
+                document.getElementById("retirarCaixa").innerHTML = retirarCaixa;
 
             });
+           
+        }
 
-            function sum (a, b) {
+        function isNumeric(n) {
+            
+            var b = !isNaN(parseFloat(n)) && isFinite(n);
+            return b;
+        }
 
-                result = parseFloat(a) + parseFloat(b);
+        function sum (a, b) {
 
-                return result.toFixed(2);
-            }
+            result = parseFloat(a) + parseFloat(b);
 
-        });
+            return result.toFixed(2);
+        }
 
         function calcLinha(moeda, quantidade, resultID) {
 
             valor = (moeda * quantidade).toFixed(2);
             document.getElementById(resultID).value = valor;
 
+        }
+
+        function resetForm() {
+           
+            document.getElementById("form-caixa").reset();
+            document.getElementById("total-amount").value = "";
+            document.getElementById("retirarCaixa").innerHTML = "R$0.00";
+            var forms = document.getElementsByClassName('needs-validation');
+            
+            Array.prototype.filter.call(forms, function(form) {
+                form.classList.remove('was-validated');
+            });
         }
 
     </script>
