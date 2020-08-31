@@ -1,6 +1,6 @@
 {
-    "name": "Contagem de valores",
-    "short_name": "Contagem de valores",
+    "name": "Contagem de Valores",
+    "short_name": "Contagem de Valores",
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#fdfdfd",
