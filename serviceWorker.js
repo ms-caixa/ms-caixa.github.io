@@ -1,4 +1,4 @@
-const staticContagemValores = "contagem-valores-v2"
+const staticContagemValores = "contagem-valores-v3"
 const assets = [
     "/",
     "/index.html",
