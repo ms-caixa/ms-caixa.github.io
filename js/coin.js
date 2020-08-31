@@ -64,7 +64,7 @@ var coins = [
     new Coin("20,00", 20.00, "id_total_2000_qt", "class_total_qt", "total_2000"),
     new Coin("50,00", 50.00, "id_total_5000_qt", "class_total_qt", "total_5000"),
     new Coin("100,00", 100.00, "id_total_10000_qt", "class_total_qt", "total_10000"),
-    // new Coin("200,00", 200.00, "id_total_20000_qt", "class_total_qt", "total_20000"),
+    new Coin("200,00", 200.00, "id_total_20000_qt", "class_total_qt", "total_20000"),
 ];
 
 function loadCoins() {
