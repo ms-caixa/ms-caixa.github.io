@@ -15,7 +15,7 @@ function submitForm() {
         document.getElementById("total-amount").value = result;
 
         retirarCaixa = sum(result, (document.getElementById("aberturaCaixa").value * -1));
-        document.getElementById("retirarCaixa").innerHTML = "R$" + retirarCaixa;
+        document.getElementById("retirarCaixa").innerHTML = retirarCaixa;
 
     });
 
