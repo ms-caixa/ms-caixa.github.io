@@ -78,7 +78,7 @@ function loadCoins() {
                         ${label}
                     </div>
                     <div class ="col-5">
-                        <input class="form-control ${informValueClass}" onkeyup="calcLinha(${coinValue}, this.value, '${resultValueID}')" id ="${informValueID}"/>
+                        <input type="number" min="1" pattern="\d" class="form-control ${informValueClass}" onkeyup="calcLinha(${coinValue}, this.value, '${resultValueID}')" id ="${informValueID}"/>
                     </div>
                     <div class="col-4">
                         <input class="form-control total" readonly id="${resultValueID}"/>
