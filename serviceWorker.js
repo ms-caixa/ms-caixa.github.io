@@ -2,7 +2,7 @@ const staticContagemValores = "contagem-valores-v1"
 const assets = [
     "/",
     "/index.html",
-    "/css/style.css",
+    // "/css/style.css",
     "/js/index.js",
     "/js/app.js",
 ]
