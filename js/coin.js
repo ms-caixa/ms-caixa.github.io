@@ -33,7 +33,7 @@ function testCoin() {
 }
 
 let coins = [
-    new Coin("0,01", 0.01, "id_total_001_qt", "class_total_qt", "total_001"),
+    // new Coin("0,01", 0.01, "id_total_001_qt", "class_total_qt", "total_001"),
     new Coin("0,05", 0.05, "id_total_005_qt", "class_total_qt", "total_005"),
     new Coin("0,10", 0.10, "id_total_010_qt", "class_total_qt", "total_010"),
     new Coin("0,25", 0.25, "id_total_025_qt", "class_total_qt", "total_025"),
@@ -45,7 +45,7 @@ let coins = [
     new Coin("20,00", 20.00, "id_total_2000_qt", "class_total_qt", "total_2000"),
     new Coin("50,00", 50.00, "id_total_5000_qt", "class_total_qt", "total_5000"),
     new Coin("100,00", 100.00, "id_total_10000_qt", "class_total_qt", "total_10000"),
-    new Coin("200,00", 200.00, "id_total_20000_qt", "class_total_qt", "total_20000"),
+    // new Coin("200,00", 200.00, "id_total_20000_qt", "class_total_qt", "total_20000"),
 ];
 
 function loadCoins() {
