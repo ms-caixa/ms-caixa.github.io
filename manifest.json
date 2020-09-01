@@ -1,4 +1,5 @@
 {
+    "version": "1.0",
     "name": "Contagem de Valores",
     "short_name": "Contagem de Valores",
     "start_url": "index.html",

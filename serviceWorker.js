@@ -10,7 +10,7 @@ const assets = [
 self.addEventListener("install", installEvent => {
     installEvent.waitUntil(
         caches.open(staticContagemValores).then(cache => {
-            // cache.addAll(assets)
+            cache.addAll(assets)
         })
     )
 });

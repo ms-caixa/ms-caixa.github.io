@@ -32,27 +32,8 @@ function testCoin() {
 
 }
 
-function iterateCoins(obj, index, array) {
-
-    var text =
-        "<div class = \"form-group row\">" +
-        "<div class = \"col-3\">" +
-        obj.label +
-        "</div>" +
-        "<div class = \"col-5\">" +
-        "<input class = \"form-control " + obj.informValueClass + "\" onkeyup=\"obj.calcLinha(this.value)\" id = \"" + obj.informValueID + "\"/>" +
-        "</div>" +
-        "<div class = \"col-4\">" +
-        "<input class = \"form-control total\" readonly id = \"" + obj.resultValueID + "\" />" +
-        "</div>" +
-        "</div>";
-
-    console.log("text: " + text);
-    document.getElementById("idCoinsList").innerHTML = text;
-}
-
-var coins = [
-    // new Coin("0,01", 0.01, "id_total_001_qt", "class_total_qt", "total_001"),
+let coins = [
+    new Coin("0,01", 0.01, "id_total_001_qt", "class_total_qt", "total_001"),
     new Coin("0,05", 0.05, "id_total_005_qt", "class_total_qt", "total_005"),
     new Coin("0,10", 0.10, "id_total_010_qt", "class_total_qt", "total_010"),
     new Coin("0,25", 0.25, "id_total_025_qt", "class_total_qt", "total_025"),
