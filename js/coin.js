@@ -52,7 +52,7 @@ function iterateCoins(obj, index, array) {
 }
 
 var coins = [
-    new Coin("0,01", 0.01, "id_total_001_qt", "class_total_qt", "total_001"),
+    // new Coin("0,01", 0.01, "id_total_001_qt", "class_total_qt", "total_001"),
     new Coin("0,05", 0.05, "id_total_005_qt", "class_total_qt", "total_005"),
     new Coin("0,10", 0.10, "id_total_010_qt", "class_total_qt", "total_010"),
     new Coin("0,25", 0.25, "id_total_025_qt", "class_total_qt", "total_025"),
