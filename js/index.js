@@ -24,7 +24,7 @@ function submitForm() {
 function isNumeric(n) {
 
     var b = !isNaN(parseFloat(n)) && isFinite(n);
-    console.log("n: " + n + " ; b: " + b);
+    // console.log("n: " + n + " ; b: " + b);
     return b;
 }
 
@@ -35,10 +35,12 @@ function sum(a, b) {
     return result.toFixed(2);
 }
 
-function calcLinha(moeda, quantidade, resultID) {
+function calcLinha(idCoin, quantidade) {
 
-    valor = (moeda * quantidade).toFixed(2);
-    document.getElementById(resultID).value = valor;
+    // console.info("idCoin: " + idCoin);
+    let coin = coinsMap.get(idCoin);
+    // console.info("coin: " + coin);
+    coin.calc(quantidade);
 
 }
 
