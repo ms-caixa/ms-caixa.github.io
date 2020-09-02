@@ -12,21 +12,25 @@ function Coin(label, coinValue, informValueID, informValueClass, resultValueID) 
         let valor = (newCoin.coinValue * howMany).toFixed(2);
         // console.log("valor: " + valor);
         document.getElementById(newCoin.resultValueID).value = valor;
+
+        return valor;
+    }
+
+    newCoin.toString = () => {
+
+        let s = JSON.stringify(newCoin);
+        // console.log("tostring" + s);
+        return s;
     }
 
     return newCoin;
-}
-
-Coin.prototype.toString = function() {
-
-    console.log(JSON.stringify(this));
 }
 
 function testCoin() {
 
     let coin = new Coin("0,01", 0.01, "_informValueID", "_informValueClass", "_resultValueID");
     console.info("coin: " + coin.label);
-    // coin.toString();
+    coin.toString();
     // coin.calcLinha(1);
 
     coin.calc(1);

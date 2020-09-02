@@ -112,7 +112,7 @@
                                    class="form-control class_total_qt" id="aberturaCaixa"
                                    aria-describedby="aberturaCaixaHelpBlock"required/>
                             <small id="aberturaCaixaHelpBlock" class="form-text text-muted">
-                                ex.: 0; 1.20; 109.10; 290;
+                                ex.: 0; 109.10; 290;
                             </small>
                             <div class="invalid-feedback">
                                 Informe o valor a guardar.
@@ -139,7 +139,7 @@
 
     <footer class="footer">
         <div class="container">
-            <span class="text-muted">@powered by ms.</span>
+            <span class="text-muted">@powered by ms. v2</span>
         </div>
     </footer>
 
@@ -164,10 +164,9 @@
                     // console.log("checkValidity: " + form.checkValidity());
                     event.preventDefault();
                     event.stopPropagation();
+
                     if (form.checkValidity() === true) {
-
                         submitForm();
-
                     }
 
                     form.classList.add('was-validated');
