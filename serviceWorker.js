@@ -1,10 +1,11 @@
-const staticContagemValores = "contagem-valores-v1.2"
+const staticContagemValores = "contagem-valores-v1.3"
 const assets = [
     "/",
     "/index.html",
     // "/css/style.css",
     "/js/index.js",
     "/js/app.js",
+    "/images/*",
 ]
 
 self.addEventListener("install", installEvent => {
